@@ -1,0 +1,137 @@
+// Dummy data for the example only
+export const SHOP_DATA = [
+  {
+    id: 1,
+    title: 'Hats',
+    routeName: 'hats',
+    items: [
+      { id: 1, name: 'Brown Brim', imageUrl: 'assets/hats.webp', price: 25 },
+      { id: 2, name: 'Blue Beanie', imageUrl: 'assets/hats.webp', price: 18 },
+      { id: 3, name: 'Brown Brim', imageUrl: 'assets/hats.webp', price: 25 },
+      { id: 4, name: 'Blue Beanie', imageUrl: 'assets/hats.webp', price: 18 },
+      { id: 5, name: 'Brown Brim', imageUrl: 'assets/hats.webp', price: 25 },
+      { id: 6, name: 'Blue Beanie', imageUrl: 'assets/hats.webp', price: 18 },
+    ],
+  },
+  {
+    id: 2,
+    title: 'Jackets',
+    routeName: 'jackets',
+    items: [
+      { id: 7, name: 'Brown Brim', imageUrl: 'assets/jackets.png', price: 25 },
+      { id: 8, name: 'Blue Beanie', imageUrl: 'assets/jackets.png', price: 18 },
+      { id: 9, name: 'Brown Brim', imageUrl: 'assets/jackets.png', price: 25 },
+      {
+        id: 10,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/jackets.png',
+        price: 18,
+      },
+      { id: 11, name: 'Brown Brim', imageUrl: 'assets/jackets.png', price: 25 },
+      {
+        id: 12,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/jackets.png',
+        price: 18,
+      },
+      { id: 13, name: 'Brown Brim', imageUrl: 'assets/jackets.png', price: 25 },
+      {
+        id: 14,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/jackets.png',
+        price: 18,
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: 'Sneakers',
+    routeName: 'sneakers',
+    items: [
+      {
+        id: 15,
+        name: 'Brown Brim',
+        imageUrl: 'assets/sneakers.png',
+        price: 25,
+      },
+      {
+        id: 16,
+        name: 'Brown Brim',
+        imageUrl: 'assets/sneakers.png',
+        price: 25,
+      },
+      {
+        id: 17,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/sneakers.png',
+        price: 18,
+      },
+      {
+        id: 18,
+        name: 'Brown Brim',
+        imageUrl: 'assets/sneakers.png',
+        price: 25,
+      },
+      {
+        id: 19,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/sneakers.png',
+        price: 18,
+      },
+      {
+        id: 20,
+        name: 'Brown Brim',
+        imageUrl: 'assets/sneakers.png',
+        price: 25,
+      },
+      {
+        id: 21,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/sneakers.png',
+        price: 18,
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: 'Womens',
+    routeName: 'womens',
+    items: [
+      { id: 22, name: 'Brown Brim', imageUrl: 'assets/womens.webp', price: 25 },
+      {
+        id: 23,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/womens.webp',
+        price: 18,
+      },
+      { id: 24, name: 'Brown Brim', imageUrl: 'assets/womens.webp', price: 25 },
+      {
+        id: 25,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/womens.webp',
+        price: 18,
+      },
+      { id: 26, name: 'Brown Brim', imageUrl: 'assets/womens.webp', price: 25 },
+      {
+        id: 27,
+        name: 'Blue Beanie',
+        imageUrl: 'assets/womens.webp',
+        price: 18,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Mens',
+    routeName: 'mens',
+    items: [
+      { id: 28, name: 'Brown Brim', imageUrl: 'assets/mens.webp', price: 25 },
+      { id: 29, name: 'Brown Brim', imageUrl: 'assets/mens.webp', price: 25 },
+      { id: 30, name: 'Blue Beanie', imageUrl: 'assets/mens.webp', price: 18 },
+      { id: 31, name: 'Brown Brim', imageUrl: 'assets/mens.webp', price: 25 },
+      { id: 32, name: 'Blue Beanie', imageUrl: 'assets/mens.webp', price: 18 },
+      { id: 33, name: 'Brown Brim', imageUrl: 'assets/mens.webp', price: 25 },
+      { id: 34, name: 'Blue Beanie', imageUrl: 'assets/mens.webp', price: 18 },
+    ],
+  },
+];

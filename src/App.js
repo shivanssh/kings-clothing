@@ -1,24 +1,15 @@
 import React from 'react';
 import './App.css';
 import { HomePage } from './components/HomePage/HomePage';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import ShopPage from './components/ShopPage/ShopPage';
 
 function App() {
-  const HatsPage = () => {
-    const navigate = useNavigate();
-    return (
-      <div>
-        <button onClick={() => navigate('/')}>Click</button>
-        <h1>Hats Page</h1>
-      </div>
-    );
-  };
-
   return (
     <React.Fragment>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='hats' element={<HatsPage />} />
+        <Route path='hats' element={<ShopPage />} />
       </Routes>
     </React.Fragment>
   );
