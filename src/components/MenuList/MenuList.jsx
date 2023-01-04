@@ -7,6 +7,7 @@ export const MenuList = () => {
       title: 'Hats',
       id: '1',
       imageUrl: 'assets/hats.webp',
+      linkUrl: 'hats',
     },
     {
       title: 'Jackets',
@@ -17,22 +18,25 @@ export const MenuList = () => {
       title: 'Sneakers',
       id: '3',
       imageUrl: 'assets/sneakers.png',
+      linkUrl: '',
     },
     {
       title: 'Womens',
       id: '4',
       size: 'large',
       imageUrl: 'assets/womens.webp',
+      linkUrl: '',
     },
     {
       title: 'Mens',
       id: '5',
       size: 'large',
       imageUrl: 'assets/mens.webp',
+      linkUrl: '',
     },
   ];
 
-  return items.map(({ title, id, imageUrl, size }) => (
-    <ListItem title={title} key={id} imageUrl={imageUrl} size={size} />
+  return items.map(({ id, ...otherSectionProps }) => (
+    <ListItem key={id} {...otherSectionProps} />
   ));
 };
