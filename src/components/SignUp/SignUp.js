@@ -6,43 +6,24 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, createUserProfileDocument } from '../../utils/firebase';
 
 const SignUp = () => {
-  const [email, setEmail] = useState('');
-  const [displayName, setDisplayName] = useState('');
-  const [passowrd, setPassowrd] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-
-  const clearState = () => {
-    setEmail('');
-    setPassowrd('');
-    setConfirmPassword('');
-    setDisplayName('');
+  const initialState = {
+    displayName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
   };
+  const [formValue, setFormValue] = useState(initialState);
 
   const handleChange = (event) => {
     const { value, name } = event.target;
-    // eslint-disable-next-line default-case
-    switch (name) {
-      case 'email':
-        setEmail(value);
-        break;
-      case 'displayName':
-        setDisplayName(value);
-        break;
-      case 'password':
-        setPassowrd(value);
-        break;
-      case 'confirmPassword':
-        setConfirmPassword(value);
-        break;
-    }
+    setFormValue({ ...formValue, [name]: value });
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    if (passowrd !== confirmPassword) {
+    const { displayName, email, password, confirmPassword } = formValue;
+    if (password !== confirmPassword) {
       alert("password didn't match");
-      setPassowrd('');
-      setConfirmPassword('');
+      setFormValue({ ...formValue, password: '', confirmPassword: '' });
       return;
     }
 
@@ -50,11 +31,11 @@ const SignUp = () => {
       const { user } = await createUserWithEmailAndPassword(
         auth,
         email,
-        passowrd
+        password
       );
 
       await createUserProfileDocument(user, { displayName });
-      clearState();
+      setFormValue(initialState);
     } catch (error) {
       console.log(error, '--------------err');
     }
@@ -70,7 +51,7 @@ const SignUp = () => {
           label='Display Name'
           name='displayName'
           handleChange={handleChange}
-          value={displayName}
+          value={formValue.displayName}
           required
         />
         <FormInput
@@ -78,7 +59,7 @@ const SignUp = () => {
           label='Email'
           name='email'
           handleChange={handleChange}
-          value={email}
+          value={formValue.email}
           required
         />
         <FormInput
@@ -86,7 +67,7 @@ const SignUp = () => {
           label='Password'
           name='password'
           handleChange={handleChange}
-          value={passowrd}
+          value={formValue.password}
           required
         />
         <FormInput
@@ -94,7 +75,7 @@ const SignUp = () => {
           label='Confirm Password'
           name='confirmPassword'
           handleChange={handleChange}
-          value={confirmPassword}
+          value={formValue.confirmPassword}
           required
         />
         <CustomButton>Sign Up</CustomButton>
