@@ -3,14 +3,14 @@ import { doc, getDoc, getFirestore, setDoc } from 'firebase/firestore/lite';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBjjcmD6qYpn8fciepiFDYadH_V-CllcFg',
-  authDomain: 'kings-clothing-db-ed877.firebaseapp.com',
-  databaseURL: 'https://kings-clothing-db-ed877-default-rtdb.firebaseio.com',
-  projectId: 'kings-clothing-db-ed877',
-  storageBucket: 'kings-clothing-db-ed877.appspot.com',
-  messagingSenderId: '530677101915',
-  appId: '1:530677101915:web:7304605de2f3b3710a967e',
-  measurementId: 'G-8BFS6Z4VLV',
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DB_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE,
+  messagingSenderId: process.env.REACT_APP_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
